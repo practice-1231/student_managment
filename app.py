@@ -16,3 +16,13 @@ add_student("Ali")
 add_student("Sara")
 
 view_students()
+
+def delete_student(name):
+    if name in students:
+        students.remove(name)
+        print(f"{name} deleted successfully.")
+    else:
+        print("Student not found.")
+
+delete_student("Ali")
+view_students()
