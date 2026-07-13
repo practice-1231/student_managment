@@ -1,0 +1,6 @@
+Project Notes
+
+1. Learn Git basics.
+2. Practice commits.
+3. Use branches for new features.
+4. Push changes to GitHub.
