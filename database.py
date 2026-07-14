@@ -25,3 +25,16 @@ def add_student(name, age, email):
     conn.close()
 
     print("Student added successfully!")
+
+def view_students():
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM students")
+
+    students = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    return students
