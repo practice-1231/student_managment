@@ -1,11 +1,27 @@
 import psycopg2
 
 def get_connection():
-    connection = psycopg2.connect(
+    return psycopg2.connect(
         host="localhost",
         database="student_db",
         user="postgres",
         password="YOUR_PASSWORD",
         port="5432"
     )
-    return connection
+
+def add_student(name, age, email):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    query = """
+    INSERT INTO students (name, age, email)
+    VALUES (%s, %s, %s)
+    """
+
+    cursor.execute(query, (name, age, email))
+    conn.commit()
+
+    cursor.close()
+    conn.close()
+
+    print("Student added successfully!")
