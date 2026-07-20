@@ -1,7 +1,4 @@
 from database import add_student
 
-add_student(
-    "Ali",
-    21,
-    "ali@gmail.com"
-)
+def test_insert_student():
+    add_student("John", 20, "john@example.com")
