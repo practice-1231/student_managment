@@ -5,7 +5,7 @@ def get_connection():
         host="localhost",
         database="student_db",
         user="postgres",
-        password="postgress",
+        password="postgres",
         port="5432"
     )
 
