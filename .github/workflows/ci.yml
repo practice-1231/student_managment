@@ -1,9 +1,12 @@
 name: CI
 
 on:
+<<<<<<< HEAD
   pull_request:
     branches: [main]
 
+=======
+>>>>>>> staging
   workflow_dispatch:
 
 jobs:
