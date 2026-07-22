@@ -1,6 +1,5 @@
 from database import view_students
 
-students = view_students()
-
-for student in students:
-    print(student)
+def test_view_students():
+    students = view_students()
+    assert students is not None
