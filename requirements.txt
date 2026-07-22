@@ -1,3 +1,2 @@
-Python 3.10+
-psycopg2-binary
+sycopg2-binary
 python-dotenv
