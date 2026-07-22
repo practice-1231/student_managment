@@ -37,6 +37,3 @@ jobs:
       - run: python init_db.py
 
 
-#yo
-#arslan
-#hehehe hahaha huhuhu
