@@ -18,6 +18,10 @@ jobs:
             exit 1
           fi
 
+<<<<<<< HEAD
+          echo "Source branch is staging."
+#heheh
+=======
 
           echo "Source branch is staging."
 #new staging
@@ -25,3 +29,4 @@ jobs:
 #youuu
 
 
+>>>>>>> 4ca4b35b0104f740ecb2a351e09b39aee7f7e858
