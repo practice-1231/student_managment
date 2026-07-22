@@ -1,4 +1,4 @@
-fastapi
-uvicorn
+#Python 3.10+
 psycopg2-binary
-pytest
+python-dotenv
+#git bid
