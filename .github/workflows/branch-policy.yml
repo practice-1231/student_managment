@@ -1,20 +1,18 @@
-name: Branch Policy
-
+name: enforce-pr-source
 on:
   pull_request:
-    branches:
-      - main
+    branches: [main, staging]
 
 jobs:
-  validate-source-branch:
+  source-branch:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Validate source branch
-        run: |
-          if [ "${{ github.head_ref }}" != "staging" ]; then
-            echo "Only staging can create a PR into main."
-            exit 1
+      - run: |
+          BASE="${{ github.base_ref }}"
+          HEAD="${{ github.head_ref }}"
+          if [ "$BASE" = "main" ] && [ "$HEAD" != "staging" ]; then
+            echo "main only accepts PRs from staging (got $HEAD)"; exit 1
           fi
-
-          echo "Valid source branch: staging"
+          if [ "$BASE" = "staging" ] && [ "$HEAD" != "dev" ]; then
+            echo "staging only accepts PRs from dev (got $HEAD)"; exit 1
+          fi
