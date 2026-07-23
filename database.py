@@ -1,8 +1,5 @@
 import psycopg2
-<<<<<<< HEAD
 #shimi shimi ai
-=======
->>>>>>> a6da65e8c6cfbd9e642bd1b01fe03c1c83986aa2
 
 def get_connection():
     return psycopg2.connect(
