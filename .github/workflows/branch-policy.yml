@@ -1,4 +1,4 @@
-name: enforce-pr-source
+name: branch policy
 on:
   pull_request:
     branches: [main, staging]
@@ -16,3 +16,4 @@ jobs:
           if [ "$BASE" = "staging" ] && [ "$HEAD" != "dev" ]; then
             echo "staging only accepts PRs from dev (got $HEAD)"; exit 1
           fi
+#paa12344455
